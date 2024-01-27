@@ -1,0 +1,15 @@
+<div id="the_main_guy">
+
+</div>
+<script src="moment.js"></script>
+<script src="moment-timezone-with-data.js"></script>
+<script>
+    the_main_guy = document.getElementById('the_main_guy')
+    setInterval(() => {
+        ind = moment().tz("Asia/India").format('LTS');
+        la= moment().tz("America/Los_Angeles").format('LTS');
+        ny= moment().tz("America/New_York").format('LTS');
+        au = moment().tz("Australia/Sydney").format('LTS');
+        the_main_guy.innerHTML =`India: ${ind}<br />LA: ${la}<br />NY: ${ny}<br />Australia: ${au}<br />Cooler tiem displays coming soon`
+    }, 1000)()
+</script>
